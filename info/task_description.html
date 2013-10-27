@@ -1,39 +1,60 @@
 <p>
-    <i>( Describe task in general )</i>
+    The robots have requested your help in setting up a new base on the island.
+    They need you to define the visibility of a buildings from a specific direction,
+    in this case, south. To help you out, you have been given a map of the buildings in the complex.
+    The map is an orthogonal projection of each of the buildings onto a horizontal plane.
+    It is oriented on a rectangular coordinate system so that the positive x-axis points east and
+    the positive y-axis points north. No two buildings in the map overlap or touch.
+    Each of the buildings have perfectly rectangular sides and are aligned from north to south and from east to west.
+    The map is the list of buildings. The building is presented as the list with coordinate of south-west corner,
+    coordinate of north-east corner and height - [Xsw, Ysw, Xne, Yne, height].
+    We need to determinate how many of the buildings are visible from the area just south of the base (excluding the angle of vision,
+    just using projection.) See the illustration below.
 </p>
+
+<img class="for_info_only" src="{{ MEDIA }}buildings-visibility.png"
+     width="600px"
+     alt="building-visibility"/>
+<img class="for_editor_only" src="{{ MEDIA }}buildings-visibility.png"
+     width="380px"
+     alt="building-visibility"/>
 
 <p>
-    Sum two passed ints
+    <strong>Input:</strong>A list of lists with buildings coordinates and heights.
+    The coordinates and the heights are integers or floats.
 </p>
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
-</p>
-
-<p>
-    <strong>Output: </strong> Int. 
-</p>
-
-
+<p><strong>Output:</strong>The quantity of visible buildings, an integer. </p>
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
-    <p>
-        <strong>Example:</strong>
-    </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+    <strong>Example:</strong>
+<pre class="brush:python">checkio([
+    [1, 1, 4, 5, 3.5],
+    [2, 6, 4, 8, 5],
+    [5, 1, 9, 3, 6],
+    [5, 5, 6, 6, 8],
+    [7, 4, 10, 6, 4],
+    [5, 7, 10, 8, 3]
+]) == 5 #"First"
+checkio([
+    [1, 1, 11, 2, 2],
+    [2, 3, 10, 4, 1],
+    [3, 5, 9, 6, 3],
+    [4, 7, 8, 8, 2]
+]) == 2 #"Second"
+assert checkio([
+    [1, 1, 3, 3, 6],
+    [5, 1, 7, 3, 6],
+    [9, 1, 11, 3, 6],
+    [1, 4, 3, 6, 6],
+    [5, 4, 7, 6, 6],
+    [9, 4, 11, 6, 6],
+    [1, 7, 11, 8, 3.25]
+]) == 4 #"Third"
+</pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    Images recognizing systems.
 </p>
