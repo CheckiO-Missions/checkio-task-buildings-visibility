@@ -39,6 +39,10 @@
     width: 100%;
 }
 
+.animation-content .explanation svg {
+    padding: 10px;
+}
+
 .animation-content .call,
 .animation-content .answer,
 .animation-content .output{

@@ -22,7 +22,8 @@ TESTS = {
                     [7, 4, 10, 6, 4],
                     [5, 7, 10, 8, 3]
                 ],
-            "answer": 5
+            "answer": 5,
+            "explanation": [5, 1, 3, 4, 0, 2]
         },
         #Second
         {
