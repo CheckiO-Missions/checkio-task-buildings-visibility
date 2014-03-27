@@ -20,11 +20,11 @@
      alt="building-visibility"/>
 
 <p>
-    <strong>Input:</strong>A list of lists with buildings coordinates and heights.
+    <strong>Input:</strong>Building coordinates and heights as a list of lists.
     The coordinates are integers. The heights are integers or floats.
 </p>
 
-<p><strong>Output:</strong>The quantity of visible buildings, an integer. </p>
+<p><strong>Output:</strong>The quantity of visible buildings as an integer. </p>
 
 <div class="for_info_only">
     <strong>Example:</strong>
@@ -56,5 +56,13 @@ assert checkio([
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    Image recognition systems.
+    It can be useful for the image recognition systems. But the main usage is graphics.
+    For the rendering of 3D model you should determine the visibility of the surfaces.
+    This concept also can be used for the architecture. For example: if you want to determine the sun sides.
+</p>
+
+<p>
+    <strong>Precondition:</strong> 0 < |buildings| < 10> 10<br>
+    &forall; x ∈ coordinate : x is an integer; 0 &le; x &le;10 <br>
+    &forall; h ∈ heights : x is an integer or a float; 0 < h &le;20 <br>
 </p>
