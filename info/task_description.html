@@ -1,7 +1,7 @@
 <p>
     The robots have requested your help setting up a new base on the island.
-    They need you to define the visibility of a building from a specific direction,
-    in this case, south. To help you out, you have been given a map of the buildings in the complex.
+    They need you to define the visibility of a building from the southern edge of the base.
+    To help you out, you have been given a map of the buildings in the complex.
     The map is an orthogonal projection of each of the buildings onto a horizontal plane.
     It is oriented on a rectangular coordinate system so that the positive x-axis points east and
     the positive y-axis points north. No two buildings in the map overlap or touch.
@@ -20,7 +20,7 @@
      alt="building-visibility"/>
 
 <p>
-    <strong>Input:</strong>Building coordinates and heights as a list of lists.
+    <strong>Input:</strong> Building coordinates and heights as a list of lists.
     The coordinates are integers. The heights are integers or floats.
 </p>
 
@@ -56,9 +56,11 @@ assert checkio([
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    It can be useful for the image recognition systems. But the main usage is graphics.
-    For the rendering of 3D model you should determine the visibility of the surfaces.
-    This concept also can be used for the architecture. For example: if you want to determine the sun sides.
+    This concept is useful for image recognition systems and graphical systems.
+    When rendering of 3D model you should determine the visibility of the surfaces.
+    This concept also can be applied in architecture and city planning,
+    allowing you to plan out which sides of a building will receive sunlight,
+    or if a building will block natural light in another building.
 </p>
 
 <p>
