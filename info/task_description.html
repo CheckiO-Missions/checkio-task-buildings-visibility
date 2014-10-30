@@ -28,7 +28,7 @@
 
 <div class="for_info_only">
     <strong>Example:</strong>
-<pre class="brush:python">checkio([
+<textarea data-code="python">checkio([
     [1, 1, 4, 5, 3.5],
     [2, 6, 4, 8, 5],
     [5, 1, 9, 3, 6],
@@ -51,7 +51,7 @@ assert checkio([
     [9, 4, 11, 6, 6],
     [1, 7, 11, 8, 3.25]
 ]) == 4 #"Third"
-</pre>
+</textarea>
 </div>
 
 <p class="for_info_only">
@@ -64,7 +64,8 @@ assert checkio([
 </p>
 
 <p>
-    <strong>Precondition:</strong> 0 < |buildings| < 10> 10<br>
-    &forall; x ∈ coordinate : x is an integer; 0 &le; x &le;10 <br>
-    &forall; h ∈ heights : x is an integer or a float; 0 < h &le;20 <br>
+    <strong>Precondition:</strong><br>
+    0 &lt; len(buildings) &lt; 10<br>
+    all(all(0 &le; x &lt; 12 for x in row[:4]) for row in buildings)<br>
+    all(0 &lt; row[4] &le;20 for row in buildings)<br>
 </p>
