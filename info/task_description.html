@@ -1,6 +1,6 @@
 <p>
-    The robots have requested your help setting up a new base on the island.
-    They need you to define the visibility of a building from the southern edge of the base.
+    For our <a href="http://www.checkio.org/mission/building-base/share/3de02090eb5fac4f0da0ced85f9f3f61/">future Robotropolis</a> we should calculate even light.
+    We need you to define the visibility of buildings from the southern edge of the base.
     To help you out, you have been given a map of the buildings in the complex.
     The map is an orthogonal projection of each of the buildings onto a horizontal plane.
     It is oriented on a rectangular coordinate system so that the positive x-axis points east and
@@ -67,5 +67,5 @@ assert checkio([
     <strong>Precondition:</strong><br>
     0 &lt; len(buildings) &lt; 10<br>
     all(all(0 &le; x &lt; 12 for x in row[:4]) for row in buildings)<br>
-    all(0 &lt; row[4] &le;20 for row in buildings)<br>
+    all(0 &lt; row[4] &le; 20 for row in buildings)<br>
 </p>
