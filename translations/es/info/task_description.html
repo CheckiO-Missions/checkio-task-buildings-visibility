@@ -1,0 +1,77 @@
+<p>
+    Para nuestra <a
+        href="http://www.checkio.org/mission/building-base/share/3de02090eb5fac4f0da0ced85f9f3f61/">futura
+    Robotropolis</a>, tenemos que ayudar a los planificadores de la ciudad a calcular como la luz alcanza
+     nuestra bella ciudad, as&iacute; como limitar el efecto <em>Urban Canyon</em>. Para ello, tendr&aacute;s que definir la
+     visibilidad de los edificios desde el extremo sur de la base. Se te ha asignado un mapa de los
+     edificios del complejo, como ayuda para tu planificaci&oacute;n.
+</p>
+<p>
+    El mapa es una proyecci&oacute;n ortogonal de cada uno de los edificios sobre un plano horizontal. Est&aacute;
+    orientado en un sistema de coordenadas rectangulares de modo que el eje x positivo se dirige hacia
+    el este y el eje y positivo hacia el norte. No existen dos edificios en el mapa que se sobre
+    posicionen o se toquen. Cada uno de los edificios tiene lados perfectamente rectangulares, que
+    se encuentran alineados de norte a sur y de este a oeste. El mapa es una lista de edificios con
+    cada edificio presentado como una lista incluyendo las coordenadas de la esquina suroeste, de la
+    esquina noreste, as&iacute; como la altura -[Xsw, Ysw, Xne, Yne, height]. Debemos determinar cu&aacute;ntos
+    edificios son visibles desde la zona al sur de la base (excluyendo el &aacute;ngulo de visi&oacute;n, simplemente
+    usando proyecci&oacute;n.) Consulta la siguiente ilustraci&oacute;n.
+</p>
+
+<img class="for_info_only" src="{{ MEDIA }}buildings-visibility.png"
+     width="600px"
+     alt="building-visibility"/>
+<img class="for_editor_only" src="{{ MEDIA }}buildings-visibility.png"
+     width="380px"
+     alt="building-visibility"/>
+
+<p>
+    <strong>Datos de Entrada:</strong> Coordenadas y alturas de los edificios, como una lista de
+    listas. Las coordenadas son enteros (<em>int</em>). Las alturas son enteros (<em>int</em>) o decimales (<em>float</em>).
+</p>
+
+<p><strong>Salida:</strong>La cantidad de edificios visibles, como un entero (<em>int</em>).</p>
+
+<div class="for_info_only">
+    <strong>Ejemplo:</strong>
+    <textarea data-code="python">checkio([
+        [1, 1, 4, 5, 3.5],
+        [2, 6, 4, 8, 5],
+        [5, 1, 9, 3, 6],
+        [5, 5, 6, 6, 8],
+        [7, 4, 10, 6, 4],
+        [5, 7, 10, 8, 3]
+        ]) == 5 #"First"
+        checkio([
+        [1, 1, 11, 2, 2],
+        [2, 3, 10, 4, 1],
+        [3, 5, 9, 6, 3],
+        [4, 7, 8, 8, 2]
+        ]) == 2 #"Second"
+        assert checkio([
+        [1, 1, 3, 3, 6],
+        [5, 1, 7, 3, 6],
+        [9, 1, 11, 3, 6],
+        [1, 4, 3, 6, 6],
+        [5, 4, 7, 6, 6],
+        [9, 4, 11, 6, 6],
+        [1, 7, 11, 8, 3.25]
+        ]) == 4 #"Third"
+    </textarea>
+</div>
+
+<p class="for_info_only">
+    <strong>&iquest;C&oacute;mo se usa?: </strong>
+    Este concepto es &uacute;til para sistemas de reconocimiento de im&aacute;genes y sistemas
+    gr&aacute;ficos. Cuando se representan modelos 3D, debes determinar la visibilidad de
+    las superficies. Tambi&eacute;n se puede aplicar en la arquitectura y la planificaci&oacute;n
+    urbana, para determinar cu&aacute;les edificios van a recibir la luz del sol (y en que
+    lugares), o si un edificio bloquear&aacute; la luz natural para otro edificio.
+</p>
+
+<p>
+    <strong>Condiciones:</strong><br>
+    0 &lt; len(buildings) &lt; 10<br>
+    all(all(0 &le; x &lt; 12 for x in row[:4]) for row in buildings)<br>
+    all(0 &lt; row[4] &le; 20 for row in buildings)<br>
+</p>
